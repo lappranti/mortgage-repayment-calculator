@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "PlusJakartaSans", sans-serif;
+  }
+
+  @font-face {
+    font-family: "PlusJakartaSans Bold";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/PlusJakartaSans-Bold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "PlusJakartaSans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/PlusJakartaSans-Medium.ttf) format("ttf");
+  }
+
+  .checkmark span {
+    display: none;
+  }
+
+  input[type="radio"]:checked + label {
+    border: 1px solid #d8db2f;
+    background-color: #d8db2f15;
+  }
+
+  input[type="radio"]:checked + label .checkmark span {
+    display: inline-block;
+  }
+
+  input[type="radio"]:checked + label .checkmark {
+    border: 1px solid #d8db2f;
+  }
+
+  .focused {
+    border: 1px solid #d8db2f !important;
+  }
+
+  .focused span.prefixe {
+    background-color: #d8db2f !important;
+  }
+}
